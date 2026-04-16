@@ -1,0 +1,15 @@
+Ctrl + Shift + P
+
+.NET:New Project
+ASP.NET Core Empty
+
+name - [Project  Name].Api
+.slnx
++ create project
+
+
+cd GameStore.Api
+build cmd -> dotnet build
+
+Run the application
+dotnet run
