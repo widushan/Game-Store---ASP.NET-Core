@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ASP.NET\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
+      "projectUniqueName": "D:\\ASP.NET - Game Store\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
       "projectName": "GameStore.Api",
-      "projectPath": "D:\\ASP.NET\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
+      "projectPath": "D:\\ASP.NET - Game Store\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "D:\\ASP.NET\\GameStore\\GameStore.Api\\obj\\",
+      "outputPath": "D:\\ASP.NET - Game Store\\GameStore\\GameStore.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config"

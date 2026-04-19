@@ -20,5 +20,20 @@ Content-Type: application/json
     "releaseDate": "2015-05-19"
 }
 
+###
+PUT http://localhost:5294/games/1
+Content-Type: application/json
+
+{
+    "name": "Street Fighter III: 3rd Strike",
+    "genre": "Fighting",
+    "price": 1999.00,
+    "releaseDate": "1999-05-19"
+}
+
+
+###
+DELETE http://localhost:5294/games/1
+
 
 
