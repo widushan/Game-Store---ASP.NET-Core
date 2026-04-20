@@ -13,3 +13,11 @@ build cmd -> dotnet build
 
 Run the application
 dotnet run
+
+
+
+for database migrations
+-> dotnet ef migrations add InitialCreate --output-dir Data\Migrations
+
+execute action migrations
+-> dotnet ef database update
