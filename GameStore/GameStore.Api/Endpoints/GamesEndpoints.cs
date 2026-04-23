@@ -1,6 +1,8 @@
 namespace GameStore.Api.Endpoints;
-using GameStore.Api.Dtos;
 
+using GameStore.Api.Data;
+using GameStore.Api.Dtos;
+using GameStore.Api.Models;
 
 
 public static class GamesEndpoints
@@ -49,23 +51,27 @@ public static class GamesEndpoints
         ;
 
         // POST /games
-        group.MapPost("/", (CreateGameDto gameDto) => {
+        group.MapPost("/", (CreateGameDto newGame, GameStoreContext dbContext) => {
 
-            // Validation
-            if (string.IsNullOrWhiteSpace(gameDto.Name)) return Results.BadRequest("Name is required");
-            if (string.IsNullOrWhiteSpace(gameDto.Genre)) return Results.BadRequest("Genre is required");
-            if (gameDto.Price <= 0) return Results.BadRequest("Price must be greater than 0");
-            if (gameDto.ReleaseDate > DateOnly.FromDateTime(DateTime.Now)) return Results.BadRequest("Release date cannot be in the future");
+            Game game = new ()
+            {
+                Name = newGame.Name,
+                GenreId = newGame.GenreId,
+                Price = newGame.Price,
+                ReleaseDate = newGame.ReleaseDate
+            };
+            dbContext.Games.Add(game);
+            dbContext.SaveChanges();    
 
-            GameDto game = new (
-                games.Count + 1,
-                gameDto.Name,
-                gameDto.Genre,
-                gameDto.Price,
-                gameDto.ReleaseDate
+            GameDetailsDto gameDto = new (
+                game.Id,
+                game.Name,
+                game.GenreId,
+                game.Price,
+                game.ReleaseDate
             );
-            games.Add(game);
-            return Results.Created($"/games/{game.Id}", game);
+            
+            return Results.Created($"/games/{gameDto.Id}", gameDto);
         });
 
         // PUT /games/1
