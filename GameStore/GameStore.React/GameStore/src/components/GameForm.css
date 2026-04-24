@@ -1,0 +1,40 @@
+.card {
+  border: 1px solid #444;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.form-label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.form-control,
+.form-select {
+  background-color: #3a3a3a;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: #3a3a3a;
+  border-color: #0d6efd;
+  color: #fff;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.form-control::placeholder {
+  color: #999;
+}
+
+.btn-close-white {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
