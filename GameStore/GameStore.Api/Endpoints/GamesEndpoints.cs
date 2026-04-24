@@ -9,29 +9,7 @@ public static class GamesEndpoints
 {
     const string GetGameEndpointName = "GetGame";
 
-    private static readonly List<GameSummaryDto> games = [
-        new (
-            1, 
-            "Street Fighter II", 
-            "Fighting", 
-            1499.00M, 
-            new DateOnly(1992, 11, 1)
-        ),
-        new (
-            2, 
-            "Grand Theft Auto V", 
-            "Action-Adventure", 
-            2999.00M, 
-            new DateOnly(2013, 9, 17)
-        ),
-        new (
-            3, 
-            "Astro Bot", 
-            "Platformer", 
-            3999.00M, 
-            new DateOnly(2024, 9, 6)
-        )
-    ];
+    
 
     public static void MapGamesEndpoints(this WebApplication app)
     {
